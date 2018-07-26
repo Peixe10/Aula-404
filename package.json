@@ -1,5 +1,5 @@
 {
-  "name": "exemplo-node",
+  "name": "pessoas.json",
   "version": "1.0.0",
   "description": "Exemplo de NodeJs para a Estacao Hack 7",
   "main": "main.js",
