@@ -23,8 +23,32 @@ function callbackLeitura(erro,sucesso){
 
     }
     else{
-        console.log(sucesso);
+        console.log(sucesso.toString());
         console.log("Texto está na tela");
 
     }
 }
+
+//NOTA IMPORTANTE, A FORMA MAIS COMUM QUE APARECERÁ É AQUELA QUE ESTA NO GIT
+
+/*fs.readFile("texte.txt", function(erro,sucesso)
+
+...
+
+)*/
+
+let paraEscrever = process.argv[2]; //Pegara a segunda coisa que está escrita e passará para um arquivo de texto. Ou seja, no node precisa estar escrito: node arquivo.js TEXTOQUEQUEROESCREVER
+
+//writeFile serve para escrever em um arquivo, se fosse appendFile ele iria adicionando conforme vai escrevendo. Para pular linha utiliza o \r\n
+
+fs.appendFile("escrever.txt", `${paraEscrever}\r\n`, (erro, sucesso) => {
+    if(erro){
+        console.log("Erro ao escrever o arquivo. O erro foi: ");
+        console.log(erro);
+    }
+    else{
+        console.log("Arquivo escrito com sucesso")
+    }
+});
+
+console.log("Funcao de escrita executada")
