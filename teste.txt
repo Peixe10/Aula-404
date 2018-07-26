@@ -1,0 +1,1 @@
+Esse é um arquivo de texto para teste. Quero ler esse arquivo de texto e imprimir no console, utilizando NodeJS
